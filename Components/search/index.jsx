@@ -12,12 +12,14 @@ const Search = (props) => {
           size="2rem"
           className={style.reload}
           onClick={props.reload}
+          title="Reload all the Data again"
         />
         <input
           type="text"
-          placeholder="Search: Username"
+          placeholder="Search by username"
           className={style.search}
           onChange={props.handlersearch}
+          title="Search by Username"
         />
       </div>
     </>

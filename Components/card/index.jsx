@@ -5,8 +5,8 @@ import { IoMdAdd } from "react-icons/io";
 import React, { useState } from "react";
 
 const Card = (props) => {
-  const [addressToggle, setAddressToggle] = useState(true);
-  const [companyToggle, setCompanyToggle] = useState(true);
+  const [addressToggle, setAddressToggle] = useState(false);
+  const [companyToggle, setCompanyToggle] = useState(false);
 
   return (
     <div className={style.wrapper}>
