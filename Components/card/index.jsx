@@ -3,6 +3,13 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import React, { useState } from "react";
+import { RiFileUserLine } from "react-icons/ri";
+import { TiUserOutline } from "react-icons/ti";
+import { TbPhoneCall } from "react-icons/tb";
+import { CgWebsite } from "react-icons/cg";
+import { FaAddressCard } from "react-icons/fa";
+import { GiSuitcase } from "react-icons/gi";
+import { FiMail } from "react-icons/fi";
 
 const Card = (props) => {
   const [addressToggle, setAddressToggle] = useState(false);
@@ -24,33 +31,45 @@ const Card = (props) => {
       </div>
       <div className={style.border}></div>
       <span>
-        <h4> Username : </h4>
+        <h4>
+          <TiUserOutline className={style.cardicon} size="1.2rem" />
+          Username :
+        </h4>
         {props.data.username}
       </span>
       <span>
-        <h4> Name : </h4>
+        <h4>
+          <RiFileUserLine className={style.cardicon} /> Name :{" "}
+        </h4>
         {props.data.name}
       </span>
       <span>
-        <h4> Email : </h4>
+        <h4>
+          <FiMail className={style.cardicon} /> Email :{" "}
+        </h4>
         {props.data.email}
       </span>
       <span>
-        <h4> Phone no. : </h4>
+        <h4>
+          <TbPhoneCall className={style.cardicon} /> Phone no. :{" "}
+        </h4>
         {props.data.phone}
       </span>
       <span>
-        <h4> Website : </h4> {props.data.website}
+        <h4>
+          <CgWebsite className={style.cardicon} /> Website :{" "}
+        </h4>{" "}
+        {props.data.website}
       </span>
       <div className={style.address}>
         <h4 onClick={() => setAddressToggle(!addressToggle)}>
+          <FaAddressCard className={style.cardicon} /> Adderess:
           <FaCaretDown
             style={{
               transform: addressToggle ? "rotate(180deg)" : "rotate(0deg)",
               transition: "all 0.3s ease-in-out",
             }}
           />
-          Adderess:
         </h4>
         <div
           className={style.addresstoggle}
@@ -64,13 +83,13 @@ const Card = (props) => {
       </div>
       <div className={style.address}>
         <h4 onClick={() => setCompanyToggle(!companyToggle)}>
+          <GiSuitcase className={style.cardicon} size="1.3rem" /> Company:{" "}
           <FaCaretDown
             style={{
               transform: companyToggle ? "rotate(180deg)" : "rotate(0deg)",
               transition: "all 0.3s ease-in-out",
             }}
           />
-          Company:
         </h4>
         <div
           className={style.addresstoggle}

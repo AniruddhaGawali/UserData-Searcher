@@ -49,6 +49,9 @@
 }
 
 .wrapper h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   margin-right: 5px;
   text-align: left;
@@ -97,4 +100,9 @@
 
 .wrapper .address .addresstoggle h4 {
   cursor: auto;
+}
+
+.cardicon {
+  color: white;
+  margin-right: 5px;
 }
